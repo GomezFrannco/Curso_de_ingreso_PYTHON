@@ -5,15 +5,15 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Franco
+apellido: Gomez
 ---
 Ejercicio: entrada_salida_08
 ---
 Enunciado:
 Al presionar el botón  'Calcular', se deberán obtener los valores contenidos en las cajas de texto (txtOperadorA y txtOperadorB), 
 transformarlos en números enteros, calcular y mostrar el resto de la división utilizando el Dialog Alert. 
-Ej: "El resto de dividir 7 por 2 es: 1" 
+Ej: "El resto de dividir 7 por 2 es: 1"
 '''
 
 class App(customtkinter.CTk):
@@ -41,8 +41,10 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-        
+        operator_a = int(self.txt_operador_a.get())
+        operator_b = int(self.txt_operador_b.get())
+        remaining = int(operator_a % operator_b)
+        alert(title="Remaining Calculator", message= f"El resto de dividir {operator_a} por {operator_b} es: {remaining}")
         
     
 if __name__ == "__main__":
