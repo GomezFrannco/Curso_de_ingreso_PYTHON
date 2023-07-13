@@ -46,7 +46,6 @@ class App(customtkinter.CTk):
         total = salary + new_salary
         alert("salario con aumento", int(total))
 
-    
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
